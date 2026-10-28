@@ -1,0 +1,8 @@
+﻿<maui:MauiWinUIApplication
+    x:Class="SumaCrud3196323.WinUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maui="using:Microsoft.Maui"
+    xmlns:local="using:SumaCrud3196323.WinUI">
+
+</maui:MauiWinUIApplication>

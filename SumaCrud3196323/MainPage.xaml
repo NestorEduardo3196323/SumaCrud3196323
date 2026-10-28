@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SumaCrud3196323.MainPage"
+             BackgroundColor="#1f1f1f">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Entry x:Name="Entryprimernumero"
+                   Placeholder="Ingresa el primer número"
+                   Keyboard="Numeric"
+                   TextColor="White"
+                   PlaceholderColor="Gray" />
+            <Entry x:Name="Entrysegundonumero"
+                   Placeholder="Ingresa el segundo número"
+                   Keyboard="Numeric"
+                   TextColor="White"
+                   PlaceholderColor="Gray" />
+            <Label x:Name="labelresultado"
+                   FontSize="24"
+                   TextColor="White"
+                   HorizontalOptions="Center" />
+
+            <Button
+                x:Name="sumarBtn"
+                Text="Click me"
+                Clicked="sumarBtn_Clicked"
+                HorizontalOptions="Center" />
+
+            <ListView x:Name="listview" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="listview_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <VerticalStackLayout Padding="5">
+                                <Label Text="{Binding Numero1}" FontSize="17" FontAttributes="Bold" TextColor="White"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding Numero2}" TextColor="White"/>
+                                    <Label Grid.Column="2" Text="{Binding Suma}" FontAttributes="Bold" TextColor="White"/>
+                                </Grid>
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

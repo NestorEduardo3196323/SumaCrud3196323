@@ -1,0 +1,10 @@
+# Carpetas de compilación de .NET / MAUI
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.user
+
+# Archivos de base de datos SQLite generados en tiempo de ejecución
+*.db3
